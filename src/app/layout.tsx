@@ -15,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} style={{
+        backgroundColor:"black",
+      }}>
         <main className="container mx-auto p-4">
           {children}
         </main>
