@@ -28,8 +28,11 @@ type NewTask = Omit<Task, 'id' | 'completed'>;
 const TaskManagementApp: React.FC<{ initialTasks: Task[] }> = ({ initialTasks }) => {
   
   const [tasks, setTasks] = useState<Task[]>(() => {
-    const storedTasks = localStorage.getItem('tasks');
-    return storedTasks ? JSON.parse(storedTasks) : initialTasks;
+    if(localStorage) {
+      const storedTasks = localStorage.getItem('tasks');
+      return storedTasks ? JSON.parse(storedTasks) : initialTasks
+    }
+    return initialTasks
   });
     const [newTask, setNewTask] = useState<NewTask>({ title: '', description: '', priority: 'medium' });
   const [searchTerm, setSearchTerm] = useState<string>('');
