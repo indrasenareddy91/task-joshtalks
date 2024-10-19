@@ -1,6 +1,7 @@
  - install all packages using npm i 
 - npm run dev to start locally
-Completed task
+- visit localhost:3000
+
 - We don't need getServerSideProps in Next.js 14 because of the introduction of Server Components
 - deployed on vercel
 - used local storage to persist tasks
