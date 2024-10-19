@@ -1,4 +1,6 @@
- - install all packages using npm i 
+- install nextjs
+- npx create-next-app@latest
+- install all packages using npm i 
 - npm run dev to start locally
 - visit localhost:3000
 
